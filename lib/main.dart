@@ -15,10 +15,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
-        fontFamily:
-            'Inter', // Ensure 'Inter' font is available or use a system default
+        fontFamily: 'Inter',
       ),
-      home: const SplashScreen(), // This is the only widget displayed initially
+      home: const SplashScreen(),
     );
   }
 }
