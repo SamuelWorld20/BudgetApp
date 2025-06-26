@@ -1,7 +1,7 @@
-// lib/splash_screen.dart
 import 'package:flutter/material.dart';
-import 'dart:async'; // Required for Timer
+import 'dart:async';
 import 'package:budgetapp/home_screen.dart';
+
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
 
@@ -9,7 +9,8 @@ class SplashScreen extends StatefulWidget {
   State<SplashScreen> createState() => _SplashScreenState();
 }
 
-class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderStateMixin {
+class _SplashScreenState extends State<SplashScreen>
+    with SingleTickerProviderStateMixin {
   late AnimationController _controller;
   late Animation<double> _animation;
 
@@ -20,23 +21,20 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
     // Initialize animation controller for fading effect
     _controller = AnimationController(
       vsync: this,
-      duration: const Duration(milliseconds: 1500), // Fade in duration
+      duration: const Duration(milliseconds: 1500),
     );
 
-    // Define the animation curve
     _animation = CurvedAnimation(
       parent: _controller,
-      curve: Curves.easeIn, // Smooth acceleration
+      curve: Curves.easeIn,
     );
 
-    // Start the animation
     _controller.forward();
 
-    // Navigate to the main app after a delay
-    Timer(const Duration(seconds: 3), () { // 3 seconds total splash screen duration
+    Timer(const Duration(seconds: 3), () {
       Navigator.of(context).pushReplacement(
         PageRouteBuilder(
-          transitionDuration: const Duration(milliseconds: 800), // Transition duration to main app
+          transitionDuration: const Duration(milliseconds: 800),
           pageBuilder: (_, __, ___) => const HomeScreen(),
           transitionsBuilder: (_, animation, __, child) {
             return FadeTransition(
@@ -59,7 +57,6 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        // Matching the gradient background of the main app
         decoration: const BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.topLeft,
@@ -67,17 +64,16 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
             colors: [Colors.blue, Colors.purple],
           ),
         ),
-        child: FadeTransition( // Apply fade transition to the entire content
+        child: FadeTransition(
           opacity: _animation,
           child: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                // App Icon (using a simple money icon for now, you can replace with an actual logo)
                 Icon(
                   Icons.account_balance_wallet,
-                  size: 120, // Large icon size
-                  color: Colors.white.withOpacity(0.9), // Slightly transparent white
+                  size: 120,
+                  color: Colors.white.withOpacity(0.9),
                   shadows: const [
                     Shadow(
                       offset: Offset(3.0, 3.0),
@@ -86,16 +82,15 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
                     ),
                   ],
                 ),
-                const SizedBox(height: 25), // Spacing below icon
-                // App Title
+                const SizedBox(height: 25),
                 const Text(
-                  'Student Budget',
+                  'Student Budget App',
                   style: TextStyle(
-                    fontFamily: 'Inter', // Ensure this font is available or use a system font
+                    fontFamily: 'Inter',
                     fontSize: 48,
-                    fontWeight: FontWeight.w900, // Extra bold
+                    fontWeight: FontWeight.w900,
                     color: Colors.white,
-                    letterSpacing: 2.0, // Spacing between letters
+                    letterSpacing: 2.0,
                     shadows: [
                       Shadow(
                         offset: Offset(4.0, 4.0),
@@ -105,22 +100,20 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
                     ],
                   ),
                 ),
-                const SizedBox(height: 10), // Spacing below title
-                // Tagline (optional)
+                const SizedBox(height: 10),
                 const Text(
-                  'Manage your finances, smarter.',
+                  'Manage your finances wisely',
                   style: TextStyle(
                     fontFamily: 'Inter',
                     fontSize: 18,
-                    color: Colors.white70, // Slightly dimmer white
+                    color: Colors.white70,
                     fontStyle: FontStyle.italic,
                   ),
                 ),
-                const SizedBox(height: 60), // Space for a potential loading indicator
-                // Optional: CircularProgressIndicator if you have initial loading
-                // CircularProgressIndicator(
-                //   valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
-                // ),
+                const SizedBox(height: 60),
+                CircularProgressIndicator(
+                  valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
+                ),
               ],
             ),
           ),
