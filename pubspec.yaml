@@ -2,6 +2,16 @@ name: budgetapp
 description: A new Flutter project.
 publish_to: 'none'
 
+flutter_launcher_icons:
+  android: "launcher_icon" 
+  ios: true
+  image_path: "assets/images/app_icon.png"
+  min_sdk_android: 21
+  remove_alpha_ios: true
+  web: false
+  windows: false
+  macos: false
+  
 version: 1.0.0+1
 
 environment:
@@ -17,6 +27,7 @@ dev_dependencies:
   flutter_lints: ^4.0.0
   shared_preferences: ^2.2.0
   cupertino_icons: ^1.0.2
+  flutter_launcher_icons: ^0.13.1
 
 flutter:
   uses-material-design: true
