@@ -1,0 +1,84 @@
+# Flutter-specific ignore rules
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.dart_tool/
+.idea/
+.vscode/
+
+# Build artifacts
+build/
+.dart_tool/
+
+# Generated files
+*.dart_tool
+*.iml
+*.iws
+*.ipr
+*.bank
+
+# Android-specific ignore rules
+android/app/src/main/assets/flutter_assets/
+android/app/build/
+android/.gradle/
+android/local.properties
+android/key.properties
+android/keystores/
+android/release.keystore
+android/debug.keystore
+
+# iOS-specific ignore rules
+ios/Flutter/.last_build_id
+ios/.symlinks/
+ios/Flutter/Generated.xcconfig
+ios/Flutter/App.framework/
+ios/Flutter/engine/
+ios/Pods/
+ios/.ios-tags
+ios/.flutter-plugins
+ios/.flutter-plugins-dependencies
+ios/DerivedData/
+ios/build/
+ios/*.xcworkspace/
+ios/*.xcodeproj/xcuserdata/
+!ios/Runner.xcworkspace/xcshareddata/
+!ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/
+
+# Windows-specific ignore rules
+windows/build/
+windows/cmake/
+windows/flutter/ephemeral/
+windows/runner/CMakeLists.txt.user
+windows/x64/
+windows/x86/
+
+# macOS-specific ignore rules
+macos/build/
+macos/cmake/
+macos/flutter/ephemeral/
+macos/Runner.xcworkspace/xcuserdata/
+macos/Runner.xcodeproj/xcuserdata/
+
+# Web-specific ignore rules
+web/build/
+web/flutter_bootstrap.js
+web/index.html
+web/main.dart.js
+web/wasm_js_gen/
+web/manifest.json
+
+# Linux-specific ignore rules
+linux/build/
+linux/flutter/ephemeral/
+linux/cmake-build-debug/
+
+# VS Code specific files
+.vscode/
+*.code-workspace
+
+# Other common ignore rules
+*.log
+*.lock
+.env
+.DS_Store # macOS specific
+Thumbs.db # Windows specific
