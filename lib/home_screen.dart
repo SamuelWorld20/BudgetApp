@@ -158,7 +158,7 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         title: const Icon(
           Icons.account_balance_wallet,
-          size: 50,
+          size: 30,
           // color: Colors.white.withOpacity(0.9),
           shadows: const [
             Shadow(

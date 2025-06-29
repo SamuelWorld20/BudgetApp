@@ -8,9 +8,9 @@ flutter_launcher_icons:
   image_path: "assets/images/app_icon.png"
   min_sdk_android: 21
   remove_alpha_ios: true
-  web: false
-  windows: false
-  macos: false
+  web: {}
+  windows: {}
+  macos: {}
   
 version: 1.0.0+1
 
