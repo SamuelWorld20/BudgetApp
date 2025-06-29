@@ -16,7 +16,7 @@ To get this project up and running on your local machine, follow these steps: Pr
 
 ## Installation Steps
 - Clone the Repository:
-`git clone https://github.com/SamuelWorld20/budgetapp.git`
+`git clone https://github.com/SamuelWorld20/BudgetApp.git`
 
 `cd budgetapp`
 
